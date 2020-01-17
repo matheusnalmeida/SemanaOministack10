@@ -1,0 +1,9 @@
+##Protocolo WEB SOCKET##
+-Protocolo quer permite que o backend envie uma resposta para o frontend, sem o frontend ter enviado uma requisição para o mesmo(no protocolo http o backend so pode enviar uma resposta, se o frontend tiver feito uma requisicao)
+
+
+
+
+##Dependencias 
+yarn add socket.io = Depedencia para utilizarmos o protocolo web socket na aplicação server
+yarn add socket.io-client = Depedencia para utilizarmos o protocolo web socket na aplicação client

@@ -1,0 +1,31 @@
+##Tipos de abordagem WEB##
+-Abordagem Tradicional: Cada requisicao realizada pelo cliente, o servidor ira retornar o conteudo completo da pagina
+contendo o HTML e CSS. Essa abordagem limita o frontwed para o browser, pois os serviços externos e o mobile nao irao
+conseguir interpretar a informacao.
+-Abordagem SPA(Single Page Application): Cada requisicao realizada pelo cliente, o servidor ira retornar apenas os dados
+necessarias, e o front-end podera preencher as informacoes na telas. A pagina nunca ira recarregar, otimizando assim a 
+performace. Com essa abordagem teremos entao quantos frontends quisermos.
+
+##Instrucoes React##
+-yarn create react-app nome_da_pasta|npx create-react-app web = Como um projeto react possui muitas dependencias, fica dificil a criacao do mesmo de
+forma manual, enatao podemos criar o mesmo de maneira mais simplificada e com todas as suas dependencias necessarias
+digitando o comando acima.
+-yarn start = Iniciar um projeto react.
+
+##Dependencias do react##
+-react-dom = Depedencia que faz com que o react possa manipular a dom(Arvore de elementos do html).
+-react-scripts = Dependencia que possui alguns scripts para que possamos executar o nosso script. Alguns desses scripts sao o start,build,teste e eject.
+
+##Estrutura do projeto React
+-Public = Arquivos que precisam estar de forma publica para a aplicação. Dentre eles podemos listar o favicon.ico(icone da aba),index.html(arquivo inicial da aplicacao),manifest.json(pwa-arquivos para aplicativos mobile em web),robots.txt(quais paginas devem ser rastreaveis), dentre outros.
+
+##Principais Conceitos do React
+-Componente = Funcao que retorna um determinado conteudo html. Bloco isolado de HTMl, CSS , JS o qual nao interfere no restante da aplicacao.
+-Propriedade = Podendo tambem ser chamado de atributo, a propriedade é simplesmente um atributo que podemos passar em um componente do react. Podemos retornar essa propriedade, simplesmente passando como parametro da funcao que representa o componente a palavra props.
+-Estado = O estado é uam informacao que é mantida e atualizada pelo proprio componenete. 
+
+##Importacoes React##
+React = A importacao do react é necessaria sempre que formos usar html dentro de arquivos javascript(JSX(Javascript + HTML))
+ReactDOM = O react-dom iremos utilizar para conseguirmos acessar os elementos da dom do html atraves do arquivo JavaScript
+useState = Funcao utilizada pelo react para criar um estado em um determinado componente. O useState retorna o vetor com duas variaveis, uma delas é uma variavel que possui o valor que passamos na construcao do useState e a outra é uma funcao que serve para atualizarmos o valor da variavel. É importante citar que o valor da variavel nao sera modificado e sim sera criada uma nova variavel a partir do valor da antiga(IMUTABILIDADE).
+useEffect = Funcao que serve para disparar uma outra funcao toda vez que uma informacao for alterada ou uma unica vez durante a renederizacao de um componente. Essa funcao recebe como parametro a funcao a ser executada e o momento que a funcao deve ser executada(nesse caso é passado um array, que caos esteja vazio, ira executar a funcao uma unica vez, e caso  possua uma variavel, ira executar a funcao toda vez que a variavel for alterada).	

@@ -1,0 +1,92 @@
+##Conceitos Gerais##
+
+-Backend:É a parte da aplicação que o usuário nao vê, ou seja tudo que esta por tras do "visual" da aplicação. O Backend
+pode conter diversos itens, dentre eles: regras de negocio,Conexão com banco de dados,Envio de email,Comunicação com webservices,
+Autenticação do usuário,Criptografia e segurança.
+
+-Frontend:Camada do nosso programa que pode ser visualizada e que recebe os dados fornceidos pelo backend, podendo ser por
+exemplo: Frontend mobile, Frontend Web,serviços externos(pois recebem informacoes), entre outros.
+-API: Sigla para Aplication Programming Interface, ou seja, uma aplicação que nao possui sua parte gráfica desenvolvida
+no backend.
+
+-Json:A siglas json que sgnifica Java Script Object Notation.Essa estrututra de dados é utilizada para comunicar informacoes 
+entre o backend e o frontend é o JSON.
+
+-API Restfull: É uma API que precisa seguir determinados padrões, como por exemplo: métodos, tipos de parametros,utilizar
+cada tipo de requisicao da forma correta(seja get,post,put,delete,etc),
+
+##Conceitos de um projeto##
+
+-yarn init -y = Basicamente ira especificar que um determinado projeto sera um projeto do tipo JavaScript. Quando o comando
+é rodado, o mesmo ira gerar um arquivo chamado package.json. Todo projeto javascript ira conter o package.json, que sera
+responsavel por armazenar algumas informacoes acerca do projeto, sendo que uma das mais importantes informacoes armazenadas
+pelo mesmo, sao as dependencias necessarias para se executar o projeto.A flag -y é usada para ignorar certas perguntas sobre
+o projeto.
+
+-yarn add nome_da_dependencia = Comando usado para adicionar dependencias no projeto. Podemos passar a flag -D para marcar
+a dependencia como dependencia de desenvolvimento, fazendo assim com que a mesma fique separada das outras dependencias
+no package json(devDependencies).
+
+-yarn.lock = Arquivo gerado no projeto ao adicionarmos alguma dependencia no projeto atraves do yarn, que ira servir como
+um cache, guaradando informancoes acerca das versoes das dependencias instaladas no projeto. Isto sera util para facilitar
+o yarn a encontrar pacotes na mesma versão e etc.
+
+-node_modules:Diretorio que ira armazenar o codigo dos pacotes que a aplicacao instalou e possui como dependencia. Geralmente
+algumas dependencias possuim outras dependencias.
+
+##Dependencias##
+
+-express:MicroFramework utilizado para gerenciamento de rotas dentre outros serviços.
+
+-nodemon:Modulo para auto-refresh do server quando se for alterada alguma sentença do codigo. Para executarmos a aplicacao
+utilizando o nodemon podemos digitar yarn nodemon nome_do_arquivo.js,ou entao, podemos tambem dentro do package.json
+definir um script contendo um identificador que representara o comando e o comando em si. Assikm poderemos rodar com o 
+nodemon simplesmente digitando nodemon seguido do nome do script.
+Exemplo de definicao no package.json "scripts":{"dev": "nodemon nome_do_arquivo.js"}
+
+-mongoose: Biblioteca para que se possa a aplicacao node se comunicar com a base de dados mongo.
+
+-axios: Biblioteca utilizada para fazer chamdas para outras APIs.
+
+-cors: Por padrao o node nao permite acessos externos a apis(acessos em enderecos diferentes), com isso podemos usar cors para que possamos retirar esse bloqueio de enderecos diferentes.
+
+##Tipos de requisicoes##
+request = Quando é acessada uma determinada rota, é feita uma requisicao para o servidor. Essa request pode conter 
+informacoes a serem processadas pelo servidor.
+response = Quando o servidor processa a request, pode ser retornado pelo mesmo uma resposta, que nesse caso sera chamada
+de response.
+
+##Metodos http##
+Existem basicamente quatro tipos principais de metodos http que podem ser utilizados, sendo elas:
+-get = Rota para buscar informacoes. Muito utilizada para listar usuarios, buscar um unico usuario
+-post = Rota para criar informacoes. Muito utilizada para salvar um produto, cadastrar um usuario.
+-put = Rota para editar informacoes> Muito utilizada para editar usuario,editar um recurso.
+-delete = Rota para deletar informacoes.
+
+##Tipos de parametros##
+-Query Params: Na maioria das vezes sao utilizados com metodos get(nao aceita corpo). Os query params sao parametros que
+ficam visiveis na url. Podemos acessar esses parametros utilizando o parametro request.query. Muito utilizados para filtros
+,paginacao, ordenacao , entre outros. Esses parametros podem ser vistos na url da pagina apos o simbolo de "?".
+Ex:http://localhost:3333/?search=Diego => Query com o nome de search e valor Diego
+-Rout Params: Na maioria das vezes sao utilizados com metodos put e delete(pois a rota é utilizada para retornar um
+elemento e esses metodos http sao utilizada para deletar e altera um unico elemento) para identificar o recurso a ser
+removido ou alterado. Esses parametros sao enviados na rota após o simbolo "/". Para acessar os mesmos nos precisamos 
+definir ao final da rota do express os simbolos "/:" seguidos do identificador para acessalos(ex: /users/:id) e chamamos
+ entao o metodo request.params. 
+-Body: Na maioria das vezes sao utilizados com metodos post e put(pois quando se quer criar ou editar entidades, é necessario
+se passar um conjunto de informacoes, sendo o body muito util para isso). Pode ser acessado atraves do request.body
+
+##Alguns metodos do modulo express##
+1) get,post,put ou delete => Ira definir uma rota sendo passado como parametro o endereco e uma funcao que recebe a request e 
+response como parametro. Abaixo estao definidos os conceitos de cada parametro:
+    1.1)request => Parametro recebido pela funcao que representara um pedido do usuario. Dentre seus metodos temos:
+        -request.query => Retorna os parametros query passados na requisicao
+        -request.params =>Retorna os parametros rout passados na requisicao
+    1.2)response => Parametro recebido pela funcao que representara uma resposta do server. Dentre seus metodos temos:
+        -response.send() => Ira enviar um simples texto como resposta
+        -response.json => Ira enviar um json como resposta
+        -request.body => Ira acessar o corpo da requisicao
+
+##Banco De Dados##
+-MongoDB = (Banco de dados nao relacional)
+-Clusters = Sao servidores que podem ter varias base de dados.

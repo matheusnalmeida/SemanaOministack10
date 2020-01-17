@@ -1,0 +1,15 @@
+##Tipos de abordagem Mobile##
+-Abordagem tradicional: Na abordagem tradicional criamos uma aplicação para rodar em IOS e outra para Android, tornando o processo de desenvolvimento repetitivo.
+-Abordagem do React Native: Na abordagem do React Native, a aplicacao é desenvolvida utilizando o JavaScript e sendo que o codigo nao é convertido em codigo nativo, e posteriormente a aplicacao pode ser gerada tanto pra ios quanto apk. Alem disso a interface grafica é nativa, pois o reatc native implementa na nossa aplicacao o JavaScript Core, que é um framework que faz com que nosso sistema entenda a linguagem JavaScript e consiga assim entender o código. 
+
+##expo info##
+-O expo é um conjunto de bibliotecas para se utilizar uma grande quantidade de funcionalidades do celular(camera,sensor,geolocalizacao).
+-yarn global add expo-cli|npm install -g expo-cli = Instalacao do expo
+-expo init nome_do_projeto = Ira criar um projeto react native com algumas dependencias ja instaladas
+
+##Dependencias e Ferramentas##
+-babel = O babel é uma ferramenta capaz de converter o codigo javascript que nos escrevemos, para uma versao em que o sistema onde esta sendo executado o programa entenda.
+-yarn add react-navigation = Depedencias para navegação entre diferentes rotas e paginas.
+-expo install react-native-maps = Api para mapas do expo
+-expo install expo-location = Pacote de localização(ex: carregar localização atual)
+-expo install react-native-webview = Api para mostrar paginas web

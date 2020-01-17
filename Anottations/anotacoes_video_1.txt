@@ -1,0 +1,10 @@
+##9 Criterios para a escolha da tecnologia correta##
+1) Entender o que o mercado esta procurando atualmente.
+2) Quais e quantas empresas estao utilizando a tecnologia a ser escolhida atualmente.
+3) Qual o tamanho da comunidade e do ecossistema ao redor das tecnologias a serem escolhidas.
+4) Quem esta por tras do desenvolvimento das tecnologias a serem escolhidas.
+5) Quais os casos de uso das tecnologias a serem escolhidas.
+6) Quantidade de vagas disponiveis no mercado que estao relacionadas com as tecnologias a serem escolhidas.
+7) O quanto as tecnologias a serem escolhidas estao alinhadas com seus objetivos
+8) O quanto é possivel reaproveitar o conhecimento destas tecnologias para multiplicar as oportunidades
+9) Verificar as vantagens tecnicas de cada uma das tecnologias a serem escolhidas
