@@ -3,16 +3,11 @@ App from Semana OmniStack 10.0 (Dev Radar)
 
 # Interfaces
 
-| Web APP
-|:-------------------------:
-|  ![](https://www.imagemhost.com.br/images/2020/01/17/interface_web.png)
-
+- Web APP
 
 <center>
   
-| Mobile APP                |
-|:---------------------------:|
-|![](https://www.imagemhost.com.br/images/2020/01/17/interface_mobile.png)|
+- Mobile APP
 
 </center>
 
